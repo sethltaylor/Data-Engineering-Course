@@ -36,5 +36,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  nyc-taxi-rides:
+  nyc_taxi_rides:
     # Applies to all files under models/example/
+
+seeds:
+  nyc_taxi_rides:
+    taxi_zone_lookup:
+      +column_types:
+        locationid: numeric
+        
